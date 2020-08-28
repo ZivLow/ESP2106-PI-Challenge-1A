@@ -19,12 +19,33 @@ LARGE_FONT= ("Verdana", 12)
 
 class SeaofBTCapp(tk.Tk):
 
+   import numpy as np
+import tkinter as tk
+from tkinter import ttk
+
+from mpl_toolkits.mplot3d import Axes3D
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_tkagg import(
+	FigureCanvasTkAgg, NavigationToolbar2Tk)
+from matplotlib.figure import Figure
+#import matplotlib.animation as animation
+from matplotlib import style
+from matplotlib.patches import FancyArrowPatch
+
+from itertools import combinations, product
+from mpl_toolkits.mplot3d import Axes3D
+from mpl_toolkits.mplot3d.proj3d import proj_transform
+
+LARGE_FONT= ("Verdana", 12)
+
+class Vector_transform(tk.Tk):
+
     def __init__(self, *args, **kwargs):
         
         tk.Tk.__init__(self, *args, **kwargs)
 
        # tk.Tk.iconbitmap(self, default="clienticon.ico")
-        tk.Tk.wm_title(self, "Sea of BTC client")
+        tk.Tk.wm_title(self, "Vector transformation app")
         
         
         container = tk.Frame(self)
@@ -126,6 +147,6 @@ class graphImbedded(tk.Frame):
         canvas.get_tk_widget().pack(side=tk.BOTTOM, fill=tk.BOTH, expand=True)
 
 
-app = SeaofBTCapp()
+app = Vector_transform()
 app.mainloop()
 
