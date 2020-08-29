@@ -30,3 +30,5 @@ plot3(0,0,0,'o','MarkerEdgeColor','k','MarkerFaceColor','m','MarkerSize',10);
 grid on; box on;
 axis([min max min max min max]);
 view([-30 60]);
+
+
